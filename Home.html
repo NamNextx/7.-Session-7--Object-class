@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+
+<script>
+    // let className = function (width, height) {
+    //     this.width = width;
+    //     this.height = height;
+    //     this.getArea = function () {
+    //         return this.width;
+    //     }
+    //
+    //
+    // }
+    //
+    // var object1 = new className(3, 7);
+    // var object2 = new className()
+    // console.log(object1.width)
+
+
+    //Buld class
+    /*
+            Lớp MyDate gồm:
+
+Thuộc tính:
+
+day (ngày) sẽ nhận vào giá trị dạng số nguyên
+month (tháng) sẽ nhận vào giá trị dạng số nguyên
+year (năm) sẽ nhận vào giá trị dạng số nguyên
+Phương thức:
+
+Date(day, month, year) là phương thức khởi tạo để tạo đối tượng với 3 tham số.
+
+getDay(), getMonth(), getYear() là phương thức trả về ngày, tháng, năm
+
+setDay(), setMonth(), setYear() là phương thức thiết đặt lại giá trị mới cho ngày tháng năm
+    */
+
+    var classDayMonthYears = function () {
+
+
+        this.setDay = function (day) {
+            this.day = day;
+            console.log(this.day);
+        }
+        this.setMonth = function (month) {
+            this.month = month;
+        }
+        this.setyear = function (year) {
+            this.year = year;
+        }
+
+        this.getDay = function () {
+            return this.day;
+        }
+        this.getMonth = function () {
+            return this.month;
+        }
+        this.getYear = function () {
+            return this.year;
+        }
+
+
+    }
+
+    var date = new classDayMonthYears();
+    var day = parseInt(prompt("Moi ban nhap vao ngay"));
+    var month = parseInt(prompt("Pls input Month"));
+    var year = parseInt(prompt("Pls Input Year"));
+
+    date.setDay(day);
+    date.setMonth(month);
+    date.setyear(year);
+
+    alert(date.getDay(day) + "/" + date.getMonth() + "/" + date.getYear());
+</script>
+</body>
+</html>
